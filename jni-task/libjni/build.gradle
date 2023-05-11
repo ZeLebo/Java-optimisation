@@ -1,0 +1,30 @@
+import org.gradle.internal.jvm.Jvm
+
+plugins {
+    id 'cpp-library'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+library {
+    binaries.configureEach { CppSharedLibrary sharedLibrary ->
+        def compileTask = sharedLibrary.compileTask.get()
+        compileTask.includes.from("${Jvm.current().javaHome}/include")
+        def osFamily = sharedLibrary.targetPlatform.targetMachine.operatingSystemFamily
+        if (osFamily.macOs) {
+            compileTask.includes.from("${Jvm.current().javaHome}/include/darwin")
+        } else if (osFamily.linux) {
+            compileTask.includes.from("${Jvm.current().javaHome}/include/linux")
+        } else if (osFamily.windows) {
+            compileTask.includes.from("${Jvm.current().javaHome}/include/win32")
+        }
+        compileTask.source.from fileTree(dir: "src/main/c", include: "**/*.c")
+        def toolChain = sharedLibrary.toolChain
+        if (toolChain instanceof VisualCpp) {
+            compileTask.compilerArgs.addAll(["/TC"])
+        } else if (toolChain instanceof GccCompatibleToolChain) {
+            compileTask.compilerArgs.addAll(["-x", "c", "-std=c11"])
+        }
+    }
+}

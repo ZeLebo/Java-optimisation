@@ -1,0 +1,6 @@
+See file:///C:/Users/sarta/Proger/Java-optimisation/jni-task/libjni/build/tmp/compileDebugCpp/output.txt for all output for compileDebugCpp.
+compiling libjni.c successful.
+libjni.c
+cl : Command line warning D9025 : overriding '/TP' with '/TC'
+
+Finished compileDebugCpp, see full log file:///C:/Users/sarta/Proger/Java-optimisation/jni-task/libjni/build/tmp/compileDebugCpp/output.txt.

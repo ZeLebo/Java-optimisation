@@ -1,0 +1,5 @@
+See file:///C:/Users/sarta/Proger/Java-optimisation/jni-task/libjni/build/tmp/linkDebug/output.txt for all output for linkDebug.
+linking libjni.dll successful.
+   Creating library C:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\build\lib\main\debug\libjni.lib and object C:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\build\lib\main\debug\libjni.exp
+
+Finished linkDebug, see full log file:///C:/Users/sarta/Proger/Java-optimisation/jni-task/libjni/build/tmp/linkDebug/output.txt.

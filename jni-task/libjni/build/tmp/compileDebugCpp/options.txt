@@ -1,0 +1,13 @@
+/TP
+/nologo
+/c
+/Zi
+/TC
+/IC:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\src\main\public
+/IC:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\src\main\headers
+/IC:\Users\sarta\.jdks\corretto-11.0.19\include
+/IC:\Users\sarta\.jdks\corretto-11.0.19\include\win32
+"/IC:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include"
+"/IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\um"
+"/IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\shared"
+"/IC:\Program Files (x86)\Windows Kits\10\Include\10.0.22000.0\ucrt"
