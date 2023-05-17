@@ -17,6 +17,10 @@ JNIEXPORT void JNICALL Java_io_github_sartakov1_JniMethods_allocate(JNIEnv *env,
 
 // method for division
 JNIEXPORT jint JNICALL Java_io_github_sartakov1_JniMethods_divide(JNIEnv *env, jobject this, jint a, jint b) {
+//    if (b == 0) {
+//        jclass Exception = *env->FindClass("java/land/Exception");
+//        *env->ThrowNew(Exception, "can't divide by zero");
+//    }
   return a / b;
 }
 

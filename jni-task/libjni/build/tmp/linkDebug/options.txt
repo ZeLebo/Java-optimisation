@@ -1,9 +1,5 @@
-/DEBUG
-/OUT:C:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\build\lib\main\debug\libjni.dll
-/NOLOGO
-/DLL
-/IMPLIB:C:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\build\lib\main\debug\libjni.lib
-"/LIBPATH:C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\lib\x64"
-"/LIBPATH:C:\Program Files (x86)\Windows Kits\10\Lib\10.0.22000.0\um\x64"
-"/LIBPATH:C:\Program Files (x86)\Windows Kits\10\Lib\10.0.22000.0\ucrt\x64"
-C:\Users\sarta\Proger\Java-optimisation\jni-task\libjni\build\obj\main\debug\4b8eda635unfsz9h5bo3sxdaz\libjni.obj
+-shared
+-o
+/Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/lib/main/debug/liblibjni.dylib
+/Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/obj/main/debug/7u7td3wbn14c3irzmjqyd6xsu/libjni.o
+-m64
