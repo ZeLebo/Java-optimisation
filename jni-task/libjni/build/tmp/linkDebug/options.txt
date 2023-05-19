@@ -1,5 +1,0 @@
--shared
--o
-/Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/lib/main/debug/liblibjni.dylib
-/Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/obj/main/debug/7u7td3wbn14c3irzmjqyd6xsu/libjni.o
--m64

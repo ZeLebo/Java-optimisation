@@ -2,9 +2,11 @@ package example
 
 import example.graph.GraphBuilder
 import example.wrapper.CacheWrapper
+import sun.awt.Mutex
 import java.nio.file.Path
 import java.nio.file.Paths
-import java.util.Random
+import java.util.*
+import java.util.concurrent.Semaphore
 
 const val medium = 1000
 const val cacheSize = medium * 2
@@ -33,10 +35,4 @@ fun main() {
         chart.addData(value.toDouble(), cache.getLifetime(value).toDouble())
     }
     chart.saveChart(Paths.get(chartsPath.toString(), "WeakReferenceCache_CacheLifetime_MAIN_Graph.jpg"))
-
-    val cache2 = CacheWrapper(producer)
-    for (i in 0 until requests) {
-        cache[getRandomKey()]
-        cache.get(getRandomKey())
-    }
 }

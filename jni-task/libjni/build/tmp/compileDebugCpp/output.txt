@@ -1,8 +1,0 @@
-See file:///Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/tmp/compileDebugCpp/output.txt for all output for compileDebugCpp.
-compiling libjni.c successful.
-/Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/src/main/c/libjni.c:13:21: warning: result of comparison of constant 4294967295 with expression of type 'int' is always true [-Wtautological-constant-out-of-range-compare]
-  for (int i = 0; i < N; i++) {
-                  ~ ^ ~
-1 warning generated.
-
-Finished compileDebugCpp, see full log file:///Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/tmp/compileDebugCpp/output.txt.

@@ -1,4 +1,0 @@
-See file:///Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/tmp/linkDebug/output.txt for all output for linkDebug.
-linking liblibjni.dylib successful.
-
-Finished linkDebug, see full log file:///Users/alexandersartakov/Proger/Java-optimisation/jni-task/libjni/build/tmp/linkDebug/output.txt.

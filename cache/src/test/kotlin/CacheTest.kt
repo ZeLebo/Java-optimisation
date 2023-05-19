@@ -17,14 +17,11 @@ val random = Random()
 val producer = { key: Int -> key.toString() }
 
 internal class CacheTest {
-
     private var cache: CacheWrapper<Int, String> = CacheWrapper(producer)
     private val randomKey: Int
         get() {
             val randomKey = (random.nextGaussian() * STD_VALUE + MEAN_VALUE).toInt()
-            return if (randomKey < 0 || randomKey >= CACHE_SIZE) {
-                this.randomKey
-            } else randomKey
+            return if (randomKey < 0 || randomKey >= CACHE_SIZE) this.randomKey else randomKey
         }
 
     @BeforeEach
@@ -35,11 +32,11 @@ internal class CacheTest {
     @Test
     fun get_ReturnsValuesFromCache_ForRandomKeys() {
         for (i in 0 until REQUESTS_NUMBER) {
-            cache!![randomKey]
+            cache[randomKey]
         }
         val chart = GraphBuilder("WeakReferenceCache hits distribution", "Values", "Returns from cache")
         for (value in 0 until CACHE_SIZE) {
-            chart.addData(value.toDouble(), cache!!.getProbability(value))
+            chart.addData(value.toDouble(), cache.getProbability(value))
         }
         chart.saveChart(Paths.get(chartsPath.toString(), "WeakReferenceCache.jpg"))
     }
@@ -47,11 +44,11 @@ internal class CacheTest {
     @Test
     fun get_ClearsCache_ForRandomKeys() {
         for (i in 0 until REQUESTS_NUMBER) {
-            cache!![randomKey]
+            cache[randomKey]
         }
         val chart = GraphBuilder("WeakReferenceCache cache lifetime", "Values", "Lifetime")
         for (value in 0 until CACHE_SIZE) {
-            chart.addData(value.toDouble(), cache!!.getLifetime(value).toDouble())
+            chart.addData(value.toDouble(), cache.getLifetime(value).toDouble())
         }
         chart.saveChart(Paths.get(chartsPath.toString(), "WeakReferenceCache_CacheLifetime.jpg"))
     }
