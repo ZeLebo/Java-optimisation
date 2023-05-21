@@ -14,6 +14,7 @@ class CacheWrapper<K, V>(producer: Function<K, V>?) : Cache<K, V>(producer) {
     // get the probability of the key being accessed
     fun getProbability(key: K): Double {
         val total = getCounter[key].toDouble()
+        // how many get to how many was put in cache
         return if (total == 0.0) 0.0 else 1 - (putCounter[key] / total)
     }
 
