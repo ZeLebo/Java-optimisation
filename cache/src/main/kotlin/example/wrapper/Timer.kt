@@ -12,7 +12,8 @@ class Timer<T> {
         val start = if (startTime[key] != null) startTime[key]!! else 0
         val end = System.nanoTime()
         val time = end - start
-        totalTime[key] = time
+        val oldValue = totalTime[key] ?: 0
+        totalTime[key] = time + oldValue
     }
 
     fun getTime(key: T): Long {
@@ -20,3 +21,4 @@ class Timer<T> {
         return if (totalTime[key] != null) totalTime[key]!! else 0
     }
 }
+

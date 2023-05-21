@@ -30,9 +30,9 @@ fun main() {
     for (i in 0 until requests) {
         cache[getRandomKey()]
     }
-    val chart = GraphBuilder("WeakReferenceCache cache lifetime", "Values", "Lifetime")
+    val chart = GraphBuilder("SoftReferenceCache cache lifetime", "Values", "Lifetime")
     for (value in 0 until cacheSize) {
         chart.addData(value.toDouble(), cache.getLifetime(value).toDouble())
     }
-    chart.saveChart(Paths.get(chartsPath.toString(), "WeakReferenceCache_CacheLifetime_MAIN_Graph.jpg"))
+    chart.saveChart(Paths.get(chartsPath.toString(), "SoftReferenceCache_CacheLifetime_MAIN_Graph.jpg"))
 }

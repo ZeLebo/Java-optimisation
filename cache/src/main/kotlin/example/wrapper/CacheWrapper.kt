@@ -14,7 +14,7 @@ class CacheWrapper<K, V>(producer: Function<K, V>?) : Cache<K, V>(producer) {
     // get the probability of the key being accessed
     fun getProbability(key: K): Double {
         val total = getCounter[key].toDouble()
-        return if (total == 0.0) 0.0 else putCounter[key] / total
+        return if (total == 0.0) 0.0 else 1 - (putCounter[key] / total)
     }
 
     // get the lifetime of the key in the cache (in nanoseconds)
@@ -27,6 +27,7 @@ class CacheWrapper<K, V>(producer: Function<K, V>?) : Cache<K, V>(producer) {
         super.remove(key)
     }
 
+    // put only when object in memory is null
     public override fun put(key: K): V {
         putCounter.inc(key)
         cacheTimer.start(key)
