@@ -1,5 +1,6 @@
 package example.entity;
 
+import java.lang.ref.PhantomReference;
 import java.lang.ref.ReferenceQueue;
 import java.lang.ref.SoftReference;
 import java.lang.ref.WeakReference;
@@ -21,7 +22,7 @@ public class Cache<K, V> {
     private final ReferenceQueue<V> re = new ReferenceQueue<>();
     private final Map<K, CacheReference> cache = new ConcurrentHashMap<>(new HashMap<K, CacheReference>());
 
-    private class CacheReference extends SoftReference<V> {
+    private class CacheReference extends PhantomReference<V> {
         // to get the object back from the reference
         private final K key;
 
