@@ -1,4 +1,4 @@
-package java.work;
+package task.work;
 
 import java.lang.reflect.Field;
 import java.util.Random;
