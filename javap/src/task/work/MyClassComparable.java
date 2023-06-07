@@ -1,4 +1,4 @@
-package java.work;
+package task.work;
 
 class MyClassComparable implements Comparable<MyClassComparable> {
     public String name;
