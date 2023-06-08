@@ -9,6 +9,7 @@ public class Main {
 
         MyClassComparable changeTmp = new MyClassComparable("aaa", 3);
         a.getStringLength();
+        System.out.println("Name of the class is " + changeTmp.name);
         try {
             a.changeFieldValue(changeTmp, "value", 5);
         } catch (IllegalAccessException | NoSuchFieldException e) {
